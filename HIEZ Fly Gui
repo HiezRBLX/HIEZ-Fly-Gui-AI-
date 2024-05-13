@@ -1,0 +1,47 @@
+-- Create a ScreenGui
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "FlyGui"
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+-- Create a Frame for the GUI
+local Frame = Instance.new("Frame")
+Frame.Name = "MainFrame"
+Frame.Size = UDim2.new(0, 200, 0, 150)
+Frame.Position = UDim2.new(0.5, -100, 0.5, -75)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 2
+Frame.Parent = ScreenGui
+
+-- Add text label
+local Title = Instance.new("TextLabel")
+Title.Name = "TitleLabel"
+Title.Size = UDim2.new(1, 0, 0, 30)
+Title.Position = UDim2.new(0, 0, 0, 0)
+Title.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+Title.BorderSizePixel = 0
+Title.Text = "Hiez Fly GUI"
+Title.Font = Enum.Font.SourceSansBold
+Title.TextSize = 18
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.Parent = Frame
+
+-- Create Fly button
+local FlyButton = Instance.new("TextButton")
+FlyButton.Name = "FlyButton"
+FlyButton.Size = UDim2.new(0, 150, 0, 50)
+FlyButton.Position = UDim2.new(0.5, -75, 0.5, -25)
+FlyButton.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+FlyButton.BorderSizePixel = 0
+FlyButton.Text = "Fly"
+FlyButton.Font = Enum.Font.SourceSansBold
+FlyButton.TextSize = 20
+FlyButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyButton.Parent = Frame
+
+-- Fly function
+local function Fly()
+    -- Your fly script here
+end
+
+-- Connect button to function
+FlyButton.MouseButton1Click:Connect(Fly)
